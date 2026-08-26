@@ -1,38 +1,93 @@
-.App {
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f3f4f6;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.game {
+  display: flex;
+  flex-direction: row;
+  gap: 40px;
+  background-color: #ffffff;
+  padding: 30px;
+  border-radius: 16px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+  align-items: flex-start;
+}
+
+.status {
+  margin-bottom: 20px;
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: #1f2937;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.board-row {
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+}
+
+.square {
+  background: #ffffff;
+  border: 2px solid #e5e7eb;
+  font-size: 2.2rem;
+  font-weight: 800;
+  height: 85px;
+  width: 85px;
+  margin: 4px;
+  padding: 0;
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+  border-radius: 12px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.02);
+}
+
+.square:hover {
+  background-color: #f9fafb;
+  border-color: #3b82f6;
+  transform: translateY(-2px);
+}
+
+.square:focus {
+  outline: none;
+}
+
+.game-info {
+  font-size: 1rem;
+  min-width: 220px;
+  border-left: 2px solid #f3f4f6;
+  padding-left: 24px;
+}
+
+.game-info ol {
+  padding-left: 0;
+  list-style: none;
+}
+
+.game-info li {
+  margin-bottom: 10px;
+}
+
+.move-button {
+  background-color: #3b82f6;
   color: white;
+  border: none;
+  padding: 8px 14px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  font-weight: 500;
+  width: 100%;
+  text-align: left;
+  transition: background-color 0.15s ease-in-out, transform 0.1s ease-in-out;
 }
 
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.move-button:hover {
+  background-color: #2563eb;
+  transform: scale(1.02);
 }
