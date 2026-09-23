@@ -1,0 +1,69 @@
+    .app-container {
+  padding: 40px;
+  font-family: Arial, sans-serif;
+  background-color: #2771bb;
+  min-height: 100vh;
+}
+
+.titulo {
+  font-size: 32px;
+  margin-bottom: 30px;
+  color: #1b263b;
+  text-align: center;
+}
+
+.equipamentos {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 25px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.card {
+  background-color: white;
+  border: 1px solid #d0d4d9;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+  padding: 20px;
+  transition: transform 0.2s;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+.imagem-equip {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.nome-equip {
+  font-weight: bold;
+  font-size: 22px;
+  margin-top: 15px;
+  color: #1b263b;
+}
+
+.status {
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+.operacional {
+  color: #0eca46;
+}
+
+.em-manutenção {
+  color: #e63946;
+}
+
+.funcao {
+  font-style: italic;
+  margin-top: 15px;
+  text-align: justify;
+  color: #555;
+  line-height: 1.5;
+}
